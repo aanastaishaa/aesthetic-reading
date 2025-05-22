@@ -1,0 +1,927 @@
+@font-face {
+    font-family: 'MAK';
+    src: url('fonts/MAK.otf'), 
+        url('fonts/MAK-bold.otf');
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Onest', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: #fff;
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-right: 60px;
+    width: 184px;
+    height: 69px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+    flex-grow: 1;
+
+    /* font-family: 'MAK'; */ 
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    text-transform: lowercase;
+
+    /* 
+    ДЛЯ ЗАГОЛОВКОВ ЖИРНЫЙ ШРИФТ
+    font-family: 'MAK';
+    font-weight: bold; */
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 18px;
+}
+
+.search-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.rectangle {
+    width: 1440px;
+    height: 392px;
+    background-color: #50311D;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.rectangle img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.categories__section {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 74px 60px 0 60px; /* Отступ сверху 74px */
+    box-sizing: border-box;
+}
+
+.categories__title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 74px; /* Отступ от заголовка до прямоугольников */
+}
+
+.categories__container {
+    display: flex;
+    gap: 20px; /* Расстояние между прямоугольниками */
+}
+
+.category__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Белая заливка */
+    border: 1px solid #000; /* Черная обводка */
+    border-radius: 50px; /* Скругление углов */
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #000; /* Черный текст */
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавное изменение стилей */
+}
+
+/* Размеры кнопок */
+.category__button:nth-child(1) {
+    width: 203px;
+    height: 67px;
+}
+
+.category__button:nth-child(2) {
+    width: 315px;
+    height: 67px;
+}
+
+.category__button:nth-child(3) {
+    width: 315px;
+    height: 67px;
+}
+
+.category__button:nth-child(4) {
+    width: 427px;
+    height: 67px;
+}
+
+/* Стили при нажатии (активном состоянии) */
+.category__button:active {
+    background-color: #806248; /* Цвет заливки при нажатии */
+    border-color: transparent; /* Убираем обводку */
+    color: #fff; /* Белый текст при нажатии */
+
+}
+.books__section {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 74px 60px; /* Отступы сверху и снизу */
+    box-sizing: border-box;
+}
+
+.books__container {
+    display: flex;
+    gap: 21px; /* Расстояние между квадратами */
+}
+
+.book__card {
+    width: 427px;
+    height: 437px;
+    background-color: #E4DCD2;
+    border-radius: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.book__image {
+    max-width: 80%; /* Размер изображения внутри квадрата */
+    max-height: 80%;
+    border-radius: 0%; /* Скругление углов изображения */
+}
+
+.add-to-cart1 {
+    width: 203px;
+    height: 67px;
+    background-color: #50311D;
+    color: #fff;
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px; /* Позиция кнопки снизу */
+}
+
+.add-to-cart:hover {
+    background-color: #3a2415; /* Изменение цвета при наведении */
+}
+.scroll__indicator {
+    width: 1320px;
+    height: 11px;
+    border-radius: 50px;
+    background-color: #E4DCD2;
+    position: relative;
+    margin-top: 100px; /* Отступ от предыдущего блока */
+}
+
+.scroll__progress {
+    width: 430px;
+    height: 11px;
+    border-radius: 50px;
+    background-color: #806248;
+    position: absolute;
+    left: 0; /* Расположение по левому краю */
+}
+
+.catalog__button {
+    width: 463px;
+    height: 90px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Выравниваем содержимое кнопки по правому краю */
+    gap: 37px; /* Расстояние между текстом и линией */
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    margin-top: 41px; /* Отступ от индикатора прокрутки */
+    margin-left: auto; /* Кнопка смещается вправо */
+    padding-right: 20px; /* Отступ от правого края */
+    
+}
+
+.arrow-line {
+    width: 139px; /* Длина линии */
+    height: 1px; /* Толщина линии */
+    background-color: #000; /* Цвет линии */
+    position: relative; /* Для позиционирования */
+}
+
+.arrow-line::after {
+    content: '';
+    position: absolute;
+    top: -5px; /* Смещение для создания стрелки */
+    right: 0;
+    width: 10px; /* Размер стрелки */
+    height: 10px;
+    border-right: 1px solid #000; /* Вертикальная линия стрелки */
+    border-bottom: 1px solid #000; /* Горизонтальная линия стрелки */
+    transform: rotate(-45deg); /* Поворот для создания стрелки */
+}
+
+.catalog__button:hover {
+    opacity: 0.8; /* Эффект при наведении */
+}
+.new-releases__section {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 74px 60px; /* Отступы сверху и снизу */
+    box-sizing: border-box;
+}
+
+.new-releases__title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 74px; /* Отступ от заголовка до прямоугольников */
+}
+.delivery__section {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 74px 60px;
+    box-sizing: border-box;
+}
+
+.delivery__title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 74px;
+}
+
+.delivery__container {
+    display: flex;
+    gap: 60px;
+}
+
+.city__list {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.city__button {
+    width: 315px;
+    height: 67px;
+    border: 1px solid #000; /* Черная обводка */
+    border-radius: 50px; /* Скругление углов */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #000; /* Черный текст */
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff; /* Белая заливка */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавное изменение стилей */
+}
+
+.city__button:active {
+    background-color: #806248; /* Цвет заливки при нажатии */
+    border-color: transparent; /* Убираем обводку */
+    color: #fff; /* Белый текст при нажатии */
+}
+
+.city-map {
+    display: none; /* По умолчанию все карты скрыты */
+}
+
+.city-map.active {
+    display: block; /* Показываем активную карту */
+}
+.about__section {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 74px 60px; /* Отступы сверху и снизу */
+    box-sizing: border-box;
+}
+
+.about__container {
+    display: flex;
+    gap: 20px; /* Расстояние между изображением и текстом */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.about__image {
+    width: 427px;
+    height: 436px;
+    border-radius: 20px; /* Скругление углов изображения */
+    overflow: hidden; /* Обрезка изображения по границам контейнера */
+}
+
+.about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+.about__text {
+    flex: 1; /* Текст занимает оставшееся пространство */
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #000;
+    text-align: left; /* Левая выключка текста */
+}
+
+.about__description {
+    margin-bottom: 24px; /* Отступ между текстом и соц.сетями */
+}
+
+.about__social {
+    margin-bottom: 24px; /* Отступ между соц.сетями и почтой */
+}
+
+.about__email {
+    margin-bottom: 0; /* Убираем отступ снизу */
+}
+.footer {
+    width: 100%;
+    height: 594px;
+    background-color: #50311D;
+    color: #fff;
+    padding-top: 73px;
+    box-sizing: border-box;
+    position: relative; /* Для позиционирования копирайта */
+}
+
+.footer__container {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.footer__documents,
+.footer__newsletter,
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__documents {
+    width: 390px;
+}
+
+.footer__newsletter {
+    width: 426px;
+}
+
+.footer__contacts {
+    width: 315px;
+}
+
+.footer__title {
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__list li {
+    font-family: 'Onest', sans-serif;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.footer__text {
+    font-family: 'Onest', sans-serif;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.footer__input {
+    width: 426px;
+    height: 67px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: none;
+    color: #fff;
+    font-family: 'Onest', sans-serif;
+    font-size: 20px;
+    padding: 0 20px;
+    margin-bottom: 23px;
+}
+
+.footer__input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.footer__subscribe {
+    width: 242px;
+    height: 64px;
+    background-color: #E4DCD2;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Onest', sans-serif;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.footer__subscribe:hover {
+    background-color: #d4c9c0;
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 28px; /* Расстояние между иконками */
+    margin-top: 24px; /* Отступ от текста контактов */
+}
+
+.footer__icon {
+    width: 45px;
+    height: 45px;
+}
+
+.footer__copyright {
+    position: absolute;
+    bottom: 48px; /* Отступ от нижнего края */
+    left: 225px; /* Приклеиваем к левому краю */
+    font-family: 'Onest', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5; /* Межстрочный интервал */
+}
+.category__button.active {
+    background-color: #806248; /* Цвет заливки при нажатии */
+    border-color: transparent; /* Убираем обводку */
+    color: #fff; /* Белый текст при нажатии */
+}
+
+/* Дополнительные стили для страницы профиля */
+.profile-page {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.profile-container {
+    width: 702px;
+    height: 526px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 175px;
+    margin-bottom: 174px; /* Расстояние до footer */
+}
+
+.profile-title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    color: #000;
+    margin-bottom: 38px;
+    text-align: center;
+}
+
+.input-container {
+    width: 492px;
+    height: 91px;
+    background-color: #E4DCD2;
+    border: none;
+    border-radius: 67px; /* Скругление углов */
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    margin-bottom: 23px;
+}
+
+.input-container input {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #806248;
+    width: 100%;
+}
+
+.input-container input::placeholder {
+    color: #806248;
+}
+
+.submit-button {
+    width: 492px;
+    height: 91px;
+    background-color: #806248;
+    border: none;
+    border-radius: 67px; /* Скругление углов */
+    color: #fff;
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.submit-button:hover {
+    background-color: #6a4f3a;
+}
+ 
+/* Основные стили для страницы каталога */
+.catalog-page {
+    height: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравниваем содержимое по левому краю */
+    background-color: #fff;
+    padding: 0 60px; /* Отступы слева и справа */
+    margin-left: 60px; /* Дополнительный отступ слева */
+    margin-bottom: 230px;
+}
+
+/* Контейнер для заголовка и кнопки-стрелки */
+.catalog-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px; /* Отступ от header */
+    padding-left: 0; /* Убираем отступ слева */
+}
+
+/* Кнопка-стрелка влево */
+.back-arrow {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    margin-right: 26px; /* Отступ между стрелкой и заголовком */
+}
+
+/* Заголовок "АСТ" */
+.catalog-title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    color: #000;
+}
+
+/* Основной контейнер для книг */
+.catalog-container {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+    gap: 20px; /* Расстояние между контейнерами */
+    margin-top: 0px; /* Отступ от заголовка */
+}
+
+/* Контейнер для одной книги */
+.book-container {
+    width: 203px;
+    height: 470px; /* Высота теперь зависит от содержимого */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравниваем содержимое по левому краю */
+}
+
+/* Прямоугольник для изображения книги */
+.book-image-container {
+    width: 203px;
+    height: 267px;
+    background-color: #E4DCD2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Изображение книги */
+.book-image-container img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Иконка "сердечко" */
+.favorite-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #806248;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+/* Иконка внутри круга */
+.favorite-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Контейнер для текста и кнопки */
+.book-info {
+    text-align: left; /* Выравниваем текст по левому краю */
+    margin-top: 17px; /* Отступ сверху */
+    width: 100%; /* Ширина контейнера */
+}
+
+/* Цена книги */
+.book-price {
+    font-family: 'Onest', sans-serif;
+    font-size: 24px;
+    color: #000;
+    margin: 0; /* Убираем отступы */
+}
+
+/* Название книги */
+.book-title {
+    font-family: 'Onest', sans-serif;
+    font-size: 20px; /* Размер шрифта 20px */
+    color: #000;
+    margin: 6px 0 12px 0; /* Отступы: сверху 6px, снизу 12px */
+    line-height: 1.2; /* Межстрочный интервал */
+}
+
+/* Кнопка "В КОРЗИНУ" */
+.add-to-cart {
+    width: 203px;
+    height: 46px;
+    background-color: #50311D;
+    color: #fff;
+    font-family: 'Onest', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    bottom: auto;
+}
+
+.add-to-cart:hover {
+    background-color: #E4DCD2; /* Изменение цвета при наведении */
+}
+/* Стили для страницы Замятина */
+.zamyatin-page {
+    width: 1440px;
+    height: auto;
+    position: relative;
+    padding: 50px 60px; /* Отступ сверху и по бокам */
+    background-color: #fff;
+}
+
+.back-arrow {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+.small-images {
+    position: absolute;
+    top: 150px; /* Отступ от стрелки */
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между маленькими изображениями */
+}
+
+.small-image {
+    width: 130px;
+    height: 200px;
+    background-color: #E4DCD2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.large-image {
+    position: absolute;
+    top: 150px; /* Выравниваем с маленькими изображениями */
+    left: 283px; /* Отступ от маленьких изображений */
+    width: 415px;
+    height: 621px;
+    background-color: #E4DCD2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.large-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-container {
+    position: absolute;
+    top: 150px; /* Выравниваем с большим изображением */
+    left: 718px; /* Отступ от большого изображения */
+}
+
+.title {
+    font-family: 'MAK', bold;
+    font-size: 64px;
+    color: #000;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Расстояние между звездой и цифрой */
+    margin-top: 4px;
+}
+
+.star-icon {
+    width: 19px;
+    height: 19px;
+}
+
+.rating-number {
+    font-family: 'Onest', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.description {
+    position: absolute;
+    top: 300px; /* Примерное значение, подберите точное значение */
+    left: 720px; /* Примерное значение, подберите точное значение */
+    
+}
+.description img {
+    width: 515px; /* Ширина как у большого изображения */
+    height: auto;
+}
+/* Стили для кнопки "В корзину" */
+.add-to-cart-button {
+    width: 317px;
+    height: 80px;
+    background-color: #50311D; /* Заливка */
+    border: none; /* Без обводки */
+    border-radius: 50px; /* Скругление углов */
+    color: #fff; /* Белый текст */
+    font-family: 'Onest', sans-serif;
+    font-size: 24px; /* Размер шрифта */
+    cursor: pointer;
+    position: absolute;
+    top: 550px; /* Позиция под фотографией "описание" */
+    left: 720px; /* Выравнивание с описанием */
+    margin-top: 50px; /* Отступ от фотографии "описание" */
+}
+
+/* Стили для блока с иконкой доставки и текстом */
+.delivery-info {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 680px; /* Позиция под кнопкой "В корзину" */
+    left: 720px; /* Выравнивание с кнопкой */
+    margin-top: 32px; /* Отступ от кнопки "В корзину" */
+}
+
+/* Стили для иконки доставки */
+.delivery-icon {
+    width: 31px;
+    height: 31px;
+}
+
+/* Стили для текста доставки */
+.delivery-text {
+    font-family: 'Onest', sans-serif;
+    font-size: 20px; /* Размер шрифта */
+    color: #000; /* Черный текст */
+    margin-left: 9px; /* Отступ от иконки */
+}
+/* Стили для блока с фотографией "отзывы" */
+.reviews-section {
+    margin-top: 880px; /* Отступ сверху 92px */
+    width: 1318px; /* Ширина фотографии */
+    height: 313px; /* Высота фотографии */
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center;
+}
+
+/* Стили для фотографии "отзывы" */
+.reviews-image {
+    width: 100%; /* Ширина фотографии */
+    height: 100%; /* Высота фотографии */
+    object-fit: cover; /* Сохранение пропорций */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0 15px;
+    transition: width 0.3s;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Onest', sans-serif;
+    font-size: 14px;
+    padding: 0 10px 0 0;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Анимация при фокусе */
+.search-container:focus-within {
+    width: 250px;
+    border-color: #806248;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .search-container {
+        width: 150px;
+    }
+    
+    .search-container:focus-within {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        width: 120px;
+    }
+    
+    .search-input::placeholder {
+        font-size: 12px;
+    }
+}
