@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработка кнопок категорий
     const categoryButtons = document.querySelectorAll('.category__button');
     const bookImages = {
-        'аст': ['images/Замятин.png', 'images/Хейли.png', 'images/Достоевский.png'],
-        'азбука-классика': ['images/Остин.png', 'images/Джеймс.png', 'images/Даль.png'],
-        'penguin classics': ['images/Дойл.png', 'images/Даль.png', 'images/Тартт.png'],
-        'oxford world\'s classics': ['images/Дойл.png', 'images/Даль.png', 'images/Тартт.png']
+        'аст': ['images/замятин.png', 'images/хейли.png', 'images/достоевский.png'],
+        'азбука-классика': ['images/остин.png', 'images/джеймс.png', 'images/даль.png'],
+        'penguin classics': ['images/дойл.png', 'images/даль.png', 'images/тартт.png'],
+        'oxford world\'s classics': ['images/дойл.png', 'images/даль.png', 'images/тартт.png']
     };
 
     categoryButtons.forEach(button => {
